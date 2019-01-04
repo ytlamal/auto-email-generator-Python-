@@ -1,0 +1,54 @@
+from selenium import webdriver
+import time
+#made 'asdgfhdsadasf'
+#made 'wegrhtjykuyjthrgewf'
+username=['asdgfhdsadasf','asdgfhdsadas','asfgdhfdgsfadSDA']
+password=['wegrhtjykuyjthrgewf','wegrhtjykuyjthrgew','wefwgrhtrjkuyjyhtg']
+url = 'https://protonmail.com/'
+
+#for i in range(1,2) :
+driver = webdriver.Chrome('/home/ytlamal/Downloads/chromedriver')
+for i in range(1,2) :
+	driver.get(url)
+	
+
+	time.sleep(2)
+
+	driver.find_element_by_xpath('//*[@title="Sign Up"]').click()
+
+	time.sleep(2)
+
+	driver.find_element_by_class_name('panel-heading').click()
+
+	time.sleep(12)
+
+	driver.find_element_by_id('freePlan').click()
+
+	time.sleep(2)
+
+	driver.find_element_by_id('username').send_keys(username[i])
+
+	time.sleep(1.5)
+
+	driver.find_element_by_id('password').send_keys(password[i])
+
+	time.sleep(2)
+
+	driver.find_element_by_id('passwordc').send_keys(password[i])
+
+	time.sleep(2)
+
+	driver.find_element_by_class_name('signUpProcess-btn-create').click()
+
+	time.sleep(2)
+
+	driver.find_element_by_id('confirmModalBtn').click()
+	
+	time.sleep(20)
+	driver.find_element_by_id('id-signup-radio-email').click()
+
+	time.sleep(6)
+	driver.find_element_by_class_xpath("//input[@type='email']").send_key(username[i])
+	time.sleep(3)
+	driver.find-element-by_class_name('pm_button primary').click()
+	

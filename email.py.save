@@ -1,0 +1,9 @@
+from selenium import webdriver
+import time
+
+url = 'https://www.google.com/intl/zh-HK/gmail/about/driver.find_element_by_class_name('panel-heading').click()'
+
+driver = webdriver.Chrome('/home/ytlamal/Downloads/chromedriver')
+driver.get(url)
+
+
